@@ -4,15 +4,13 @@ public class Automovil extends Vehiculo{
     private int cantidadPuertas;
     public Automovil(String marca, int año, double precio, int capacidadEstanque, int nivelEstanque, int cantidadPuertas) {
         super(marca, año, precio, capacidadEstanque, nivelEstanque);
-        if(cantidadPuertas%2 == 0){
-            ;}
-        else {
+        if(cantidadPuertas %2 != 0){
             try {
                 throw new Error("Cantidad de puertas invalida!");
             }catch (Error e) {
                 System.out.println(e.getMessage());
             }
-        }
+            ;}
     }
 
    @Override
